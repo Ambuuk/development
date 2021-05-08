@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Temp">
+    <top>
+        <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: CF81FF;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="searchField" layoutX="480.0" layoutY="15.0" prefHeight="30.0" prefWidth="200.0" promptText="search..." AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                <Label layoutX="35.0" layoutY="21.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="110.0" layoutX="10.0" layoutY="10.0">
+                            <image>
+                                <Image url="@../icons/ausoft.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="340.0" prefWidth="130.0" style="-fx-background-color: F6E8FF;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane layoutX="10.0" layoutY="10.0">
+                    <children>
+                        <Button fx:id="HomeBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#HomeBut" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0">
+                                    <image>
+                                        <Image url="@../icons/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="45.0">
+                    <children>
+                        <Button fx:id="RecentBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#RecentBut" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Recent" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0">
+                                    <image>
+                                        <Image url="@../icons/recent.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="80.0">
+                    <children>
+                        <Button fx:id="OptionBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Options" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0">
+                                    <image>
+                                        <Image url="@../icons/options.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="115.0">
+                    <children>
+                        <Button fx:id="HelpBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Help" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0">
+                                    <image>
+                                        <Image url="@../icons/help.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="150.0">
+                    <children>
+                        <Button fx:id="ExitBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Exit" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0">
+                                    <image>
+                                        <Image url="@../icons/exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </left>
+   <center>
+      <ScrollPane prefHeight="440.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="455.0" prefWidth="553.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label>
+                           <graphic>
+                              <ImageView fx:id="installIcon" fitHeight="80.0" fitWidth="80.0">
+                                 <image>
+                                    <Image url="@../icons/teams.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Button fx:id="installBut" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgba(150, 53, 210, 1);" text="Install" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="320.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TextArea fx:id="textArea" prefHeight="350.0" prefWidth="553.0" promptText="write here.." style="-fx-background-color: F6E8FF;" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextArea>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+
+</BorderPane>
