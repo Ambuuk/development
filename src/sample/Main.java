@@ -12,12 +12,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         int sWidth = 700;
         int sHeight = 500;
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-////        Parent root2 = FXMLLoader.load(getClass().getResource("temp.fxml"));
-//        primaryStage.setTitle("AUSoft");
-//        Scene primaryScene = new Scene(root, sWidth, sHeight);
-//        primaryStage.setScene(primaryScene);
-//        primaryStage.show();
 
         FXMLLoader firstPaneLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent firstPane = firstPaneLoader.load();
