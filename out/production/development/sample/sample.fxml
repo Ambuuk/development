@@ -120,7 +120,7 @@
          <content>
             <FlowPane fx:id="flow" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="officeBut" alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Office" textAlignment="CENTER" wrapText="true">
+                  <Button fx:id="officeBut" alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Office" textAlignment="CENTER" wrapText="true">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -132,7 +132,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="JavaBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Java">
+                  <Button fx:id="JavaBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Java">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -144,7 +144,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="MavenBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Maven">
+                  <Button fx:id="MavenBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Maven">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -156,7 +156,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="EclipseBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Eclipse IDE">
+                  <Button fx:id="EclipseBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Eclipse IDE">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -168,7 +168,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="devCBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Dev C++">
+                  <Button fx:id="devCBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Dev C++">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -180,7 +180,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="codeBlocksBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Code::Blocks">
+                  <Button fx:id="codeBlocksBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Code::Blocks">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -192,7 +192,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="intelliJBut" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="IntelliJ IDEA">
+                  <Button fx:id="intelliJBut" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="206.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="IntelliJ IDEA">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -204,7 +204,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="teamsBut" alignment="CENTER" contentDisplay="TOP" layoutX="206.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="MS Teams">
+                  <Button fx:id="teamsBut" alignment="CENTER" contentDisplay="TOP" layoutX="206.0" layoutY="206.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="MS Teams">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -216,7 +216,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="andrStudBut" alignment="CENTER" contentDisplay="TOP" layoutX="387.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Android Studio">
+                  <Button fx:id="andrStudBut" alignment="CENTER" contentDisplay="TOP" layoutX="387.0" layoutY="206.0" mnemonicParsing="false" onAction="#openTutorial" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Android Studio">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>

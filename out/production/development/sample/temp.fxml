@@ -36,7 +36,7 @@
             <children>
                 <AnchorPane layoutX="10.0" layoutY="10.0">
                     <children>
-                        <Button fx:id="HomeBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#HomeBut" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Button fx:id="HomeBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openFirstScene" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <font>
                                 <Font name="System Bold" size="16.0" />
                             </font>
@@ -133,6 +133,14 @@
                               </ImageView>
                            </graphic>
                         </Label>
+                        <Button mnemonicParsing="false" onAction="#openFirstScene" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(150, 53, 210, 1);" text="Back" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="200.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
                         <Button fx:id="installBut" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgba(150, 53, 210, 1);" text="Install" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
@@ -141,7 +149,7 @@
                               <Insets />
                            </opaqueInsets>
                            <HBox.margin>
-                              <Insets left="320.0" top="20.0" />
+                              <Insets left="20.0" top="20.0" />
                            </HBox.margin>
                         </Button>
                      </children>

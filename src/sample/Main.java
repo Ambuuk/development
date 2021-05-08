@@ -12,12 +12,34 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         int sWidth = 700;
         int sHeight = 500;
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//        Parent root2 = FXMLLoader.load(getClass().getResource("temp.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+////        Parent root2 = FXMLLoader.load(getClass().getResource("temp.fxml"));
+//        primaryStage.setTitle("AUSoft");
+//        Scene primaryScene = new Scene(root, sWidth, sHeight);
+//        primaryStage.setScene(primaryScene);
+//        primaryStage.show();
+
+        FXMLLoader firstPaneLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        Parent firstPane = firstPaneLoader.load();
+        Scene firstScene = new Scene(firstPane, sWidth, sHeight);
+
+        // getting loader and a pane for the second scene
+        FXMLLoader secondPageLoader = new FXMLLoader(getClass().getResource("temp.fxml"));
+        Parent tutoPane = secondPageLoader.load();
+        Scene tutoScene = new Scene(tutoPane, sWidth, sHeight);
+
+        // injecting second scene into the controller of the first scene
+        Controller firstPaneController = (Controller) firstPaneLoader.getController();
+        firstPaneController.setSecondScene(tutoScene);
+
+        // injecting first scene into the controller of the second scene
+        Temp secondPaneController = (Temp) secondPageLoader.getController();
+        secondPaneController.setFirstScene(firstScene);
+
         primaryStage.setTitle("AUSoft");
-        Scene primaryScene = new Scene(root, sWidth, sHeight);
-        primaryStage.setScene(primaryScene);
+        primaryStage.setScene(firstScene);
         primaryStage.show();
+
     }
 
 
