@@ -34,7 +34,7 @@
          <children>
             <AnchorPane layoutX="10.0" layoutY="10.0">
                <children>
-                  <Button fx:id="HomeBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#HomeBut" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Button fx:id="HomeBut" alignment="TOP_LEFT" layoutX="-1.0" mnemonicParsing="false" onAction="#homeButton" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Home" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -48,70 +48,34 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="45.0">
-               <children>
-                  <Button fx:id="RecentBut" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#RecentBut" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Recent" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
-                           <image>
-                              <Image url="@../icons/recent.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="80.0">
-               <children>
-                  <Button fx:id="OptionBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Options" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
-                           <image>
-                              <Image url="@../icons/options.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="115.0">
-               <children>
-                  <Button fx:id="HelpBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Help" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
-                           <image>
-                              <Image url="@../icons/help.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="150.0">
-               <children>
-                  <Button fx:id="ExitBut" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Exit" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0">
-                           <image>
-                              <Image url="@../icons/exit.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="45.0" />
+            <AnchorPane layoutX="10.0" layoutY="80.0" />
+            <AnchorPane layoutX="10.0" layoutY="115.0" />
+            <AnchorPane layoutX="10.0" layoutY="150.0" />
+            <Button fx:id="HelpBut" alignment="TOP_LEFT" layoutX="8.0" layoutY="42.0" mnemonicParsing="false" onAction="#helpButton" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Help" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="42.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../icons/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ExitBut" alignment="TOP_LEFT" layoutX="7.0" layoutY="75.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: false;" text="Exit" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../icons/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </left>
@@ -120,7 +84,7 @@
          <content>
             <FlowPane fx:id="flow" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="officeBut" alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Office" textAlignment="CENTER" wrapText="true">
+                  <Button fx:id="officeBut" alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" mnemonicParsing="false" onAction="#openOffice" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Office" textAlignment="CENTER" wrapText="true">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -132,7 +96,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="JavaBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Java">
+                  <Button fx:id="JavaBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#openJava" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Java">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -144,7 +108,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="MavenBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Maven">
+                  <Button fx:id="MavenBut" alignment="CENTER" contentDisplay="TOP" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#openMaven" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Maven">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -156,7 +120,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="EclipseBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Eclipse IDE">
+                  <Button fx:id="EclipseBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openEclipse" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Eclipse IDE">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -168,7 +132,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="devCBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Dev C++">
+                  <Button fx:id="devCBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openDevC" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Dev C++">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -180,7 +144,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="codeBlocksBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Code::Blocks">
+                  <Button fx:id="codeBlocksBut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openCodeBlocks" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Code::Blocks">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -192,7 +156,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="intelliJBut" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="IntelliJ IDEA">
+                  <Button fx:id="intelliJBut" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="206.0" mnemonicParsing="false" onAction="#openIntelliJ" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="IntelliJ IDEA">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -204,7 +168,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="teamsBut" alignment="CENTER" contentDisplay="TOP" layoutX="206.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="MS Teams">
+                  <Button fx:id="teamsBut" alignment="CENTER" contentDisplay="TOP" layoutX="206.0" layoutY="206.0" mnemonicParsing="false" onAction="#openTeams" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="MS Teams">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
@@ -216,7 +180,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="andrStudBut" alignment="CENTER" contentDisplay="TOP" layoutX="387.0" layoutY="206.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Android Studio">
+                  <Button fx:id="andrStudBut" alignment="CENTER" contentDisplay="TOP" layoutX="387.0" layoutY="206.0" mnemonicParsing="false" onAction="#openAndroidStudio" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: F6E8FF;" text="Android Studio">
                      <FlowPane.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </FlowPane.margin>
