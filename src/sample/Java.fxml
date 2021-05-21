@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: rgba(251, 245, 255, 1);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: rgba(251, 245, 255, 1);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.javaController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,17 +22,17 @@
          </font>
       </Text>
       <Text layoutX="20.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explanations" />
-      <Button layoutX="30.0" layoutY="450.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: CF81FF;" text="JDK татах">
+      <Button fx:id="JdkDownload" layoutX="30.0" layoutY="450.0" mnemonicParsing="false" onAction="#downloadJdk" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: CF81FF;" text="JDK татах">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="140.0" layoutY="450.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: CF81FF;" text="RE татах">
+      <Button fx:id="JreDownload" layoutX="140.0" layoutY="450.0" mnemonicParsing="false" onAction="#downloadJre" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: CF81FF;" text="JRE татах">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="260.0" layoutY="450.0" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: CF81FF;" text="Суулгах заавар">
+      <Button fx:id="installationGuide" layoutX="260.0" layoutY="450.0" mnemonicParsing="false" onAction="#javaInstallGuide" prefHeight="30.0" style="-fx-background-color: CF81FF;" text="Суулгах заавар">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
